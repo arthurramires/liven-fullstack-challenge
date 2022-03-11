@@ -1,10 +1,38 @@
+
 module.exports = {
-  preset: 'ts-jest',
-  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  setupFiles: ['./jest.setup.js'],
+  moduleFileExtensions: [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+
   moduleNameMapper: {
-    '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/src/__mocks__/fileMock.ts',
+    '^.+\\.(css|sass|scss)$': 'identity-obj-proxy',
+  },
+
+  resetMocks: true,
+
+  setupFiles: [
+    "react-app-polyfill/jsdom"
+  ],
+
+  setupFilesAfterEnv: [
+    "<rootDir>/config/jest/setupTests.ts"
+  ],
+
+  testMatch: [
+    "**/__tests__/**/?(*.)+(spec|test).[tj]s?(x)",
+  ],
+
+  transform: {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/transforms/babelTransform.ts",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/transforms/fileTransform.ts"
   },
 };

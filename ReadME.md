@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./src/assets/logodark.jpg" />
-</p>
-
 # LivenChart
 Este repositório é referente ao desafio técnico da Liven.
 
