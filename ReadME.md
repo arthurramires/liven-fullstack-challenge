@@ -16,5 +16,4 @@ Para inicializar todos os testes já prepardos, utilize <code> yarn test </code>
 # Como rodar este projeto? 🤔
 Para obter esse projeto, siga os passos:
 1. Rode o comando <code> yarn </code> na raíz da pasta do projeto clonado para baixar as dependências.
-2. Rode <code>json-server server.json -p 3333</code> na raíz da pasta do projeto para inicializar a Fake API.
-3. Rode <code> yarn start </code> na raíz da pasta do projeto para inicializar o servidor.
+2. Rode <code> yarn start </code> na raíz da pasta do projeto para inicializar o servidor.
